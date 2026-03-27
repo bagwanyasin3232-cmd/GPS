@@ -1,105 +1,281 @@
 <html>
+
     <head>
-        <title>Experiment 10</title>
+        <title>Project</title>
         <style>
-            body {
-                background-color: antiquewhite;
-                text-align: center;
-                color: rgb(0, 0, 0);
+        body {
+            background-image: url('data:image/jpeg;base64,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');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;  
+        }
+
+        h1 {
+            background-color: gray;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            margin-right: 23px;
+
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            gap: 2px;
+            background-color: rgb(180, 174, 174);
+            color: black;
+            margin: 10px;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: white;
+            width: 80%;
+            margin: auto;
+        }
+        .first {
+            background-color: gray;
+            color: black;
+            width: 99%;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 5px;
+            border-bottom: 2px solid white;
+        }
+        .im {
+                width: 250px;
+                height: 200px;
+                margin-top: 5px;
             }
-            .container {
-                display: grid;
-                grid-template-columns: repeat(6,1fr);
-                background-color: aqua;
-                margin: 2px;
-                padding: 2px;
-            }
-            .menu {
-                display: block;
-                text-align: center;
-                margin: 2px;
-                padding: 4px;
-            }
-            .im {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                height: 60px;
-                width: 60px;
-            }
-            a {
-                text-decoration: none;
-                font-weight: bold;
-                color: black;
-            }
-            .text {
-                color: black;
-                text-align: center;
-            }
-            .img {
-                width: 100%;
-                height: 77%;
-            }
-            .head {
-                background-color: rgb(46, 52, 84) ;
-                padding: 1px;
-                color: white;
-               
-            }
-        </style>
+        .second {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        h2 {
+            margin-left: 0px;
+        } 
+        button {
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+            float: right;
+            margin-top: 0px;
+            margin-right: 0px;
+        }   
+    </style>
     </head>
+
     <body>
-        <div class="head">
-            <h1>Government Ploytechnic, Solapur</h1>
-          
-        </div>
-        <div class="container">
-            <div class="menu">
-                <a href="cm.html">
-                    <img src="cm.png" class="im">
-                    <p class="text">Computer Technology</p>
-                </a>
+        <h1>My Blog Site</h1>
+        <nav>
+            <a href="login.html">Log In</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav><br>
+        <div class="main">
+            <div class="first">
+                <img src="post1.1.jpg" class="im">
+                <div class="second">
+                    <p>
+                        <h2>Learning HTML for beginners</h2>
+                        HTML (HyperText Markup Language) is the basic building
+                        block of any website. It is used to create the
+                        structure of web pages.Every website that
+                        we see on the internet is built using HTML along with other
+                        technologies like CSS and JavaScript
+                    </p>
+                    <a href="post1.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
             </div>
 
-             <div class="menu">
-                <a href="if.html">
-                    <img src="it.png" class="im">
-                    <p class="text">Information Technology</p>
-                </a>
+            <div class="first">
+                <img src="post2.webp" class="im">
+                <div class="second">
+                    <p>
+                        <h2>Introduction to CSS</h2>
+                        CSS (Cascading Style Sheets) is used to style and design
+                        web pages. While HTML is responsible for the structure, CSS is
+                        responsible for the appearance of a website.
+                        With CSS, we can change colors, fonts, spacing, layout,
+                        and
+                        even add animations.
+                    </p>
+                    <a href="post2.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
             </div>
 
-             <div class="menu">
-                <a href="et.html">
-                    <img src="et.png" class="im">
-                    <p class="text">Electronics Engineering</p>
-                </a>
+            <div class="first">
+                <img src="post3.jpeg" class="im">
+                <div class="second">
+                    <p>
+                        <h2>The Unsosted Gratitudes</h2>
+                        On the way to the second floor of my house on Saturday,
+                        I sat down on the stairs. Exhausted from three straight
+                        months of all- things-relocation, I opened Instagram.
+                        Twenty doomscrolling minutes later, I wasn't refreshed
+                    by
+                    viewing pretty things, nor did I have even one
+                    stress-relieving laugh.
+                    </p>
+                    <a href="post3.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
             </div>
 
-             <div class="menu">
-                <a href="ee.html">
-                    <img src="ee.png" class="im">
-                    <p class="text">Electrical Engineering</p>
-                </a>
+            <div class="first">
+                <img src="post4.jpeg" class="im">
+                <div class="second">
+                    <p>
+                        <h2>The importance of human in the Loop</h2>
+                        Last October, we introduced MCP support on
+                        WordPress.com, giving AI agents like Claude, ChatGPT, OpenClaw, and
+                        Cursor a window into your site’s content, analytics, and
+                        settings. Thousands of you connected your favorite AI tools, asked
+                    questions about your sites, and saved hours of dashboard
+                    diving.
+
+                    </p>
+                    <a href="post4.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
             </div>
 
-             <div class="menu">
-                <a href="ce.html">
-                    <img src="ce.png" class="im">
-                    <p class="text">Civil Engineering</p>
-                </a>
+            <div class="first">
+                <img src="post5.webp" class="im">
+                <div class="second">
+                    <p>
+                        <h2>“Don’t be who ISIS wants you to be”: Bloggers on
+                            Paris and Beirut</h2>
+                        A writer from Cultive le Web was out for an evening with
+                        friends Friday night when shooting began on the
+                        rue de Charonne. The staccato phrasing of this
+                        play-by-play
+                        post captures brings readers some tiny measure
+                        of the fear, panic, and disbelief. It’s an unvarnished
+                        outpouring we wish he had no occasion to write, but
+                        are glad he did.
+                    </p>
+                    <a href="post5.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
             </div>
 
-             <div class="menu">
-                <a href="me.html">
-                    <img src="me.png" class="im">
-                    <p class="text">Mechanical Engineering</p>
-                </a>
+            <div class="first">
+                <img src="post6.webp" class="im">
+                <div class="second">
+                    <p>
+                        <h2>AI Website Building: Separating Hype from
+                            Reality</h2>
+                        A writer from Cultive le Web was out for an evening with
+                        friends Friday night when shooting began on the
+                        rue de Charonne. The staccato phrasing of this
+                        play-by-play post captures brings readers some tiny measure
+                        of the fear, panic, and disbelief. It’s an unvarnished
+                        outpouring we wish he had no occasion to write, but
+                        are glad he did.
+                    </p>
+                    <a href="post6.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
             </div>
-             </div>
 
-             <div class="menu">
-                    <img src="gp.jpeg" class="img">
-                </a>
+            <div class="first">
+                <img src="post7.1.jpg" class="im">
+                <div class="second">
+                    <p>
+                        <h2>Four Food Blogs to Follow Now</h2>
+                        From sweet to savory, these four fantastic food blogs
+                        will satisfy your appetite. If you enjoy eating
+                        (and who doesn’t?!), check them out and follow them in
+                        your Reader so you won’t miss a dish.
+                    </p>
+                    <a href="post7.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="first">
+                <img src="post8.webp" class="im">
+                <div class="second">
+                    <p>
+                        <h2>Web Hosting vs. Website Builder: A Beginner
+                            Guide</h2>
+                        The quick answer: you don’t necessarily have to choose
+                        one or the other. Web hosting companies host your site’s
+                        files so they are accessible online, while website
+                        builders are software services for creating websites.
+                        For most new users, the best solution is to choose a
+                        hosting company and a website builder.
+                    </p>
+                    <a href="post8.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="first">
+                <img src="post9.webp" class="im">
+                <div class="second">
+                    <p>
+                        <h2>Meet the Studio Assistant: Your Smart Companion for
+                            Building WordPress Sites Locally</h2>
+                        The quick answer: you don’t necessarily have to choose
+                        one
+                        or the other. Web hosting companies host your site’s
+                        files so they are accessible online, while website
+                        builders
+                        are software services for creating websites.
+                        For most new users, the best solution is to choose a
+                        hosting
+                        company and a website builder.
+                    </p>
+                    <a href="post9.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="first">
+                <img src="post10.webp" class="im">
+                <div class="second">
+                    <p>
+                        <h2>WordCamp Europe 2025 Recap: Connecting and Learning
+                            in Basel, Switzerland</h2>
+                        Ever wish you could just walk into a room and
+                        immediately
+                        feel like you belong? That’s what going to WordCamp is
+                        like.
+                        A large part of the magic of WordPress isn’t the
+                        software—it’s the community.
+                        WordCamp Europe 2025, one of three WordPress flagship
+                        events, took place in Basel, Switzerland from June 5th
+                        to
+                        June 7th.
+                    </p>
+                    <a href="post10.html">
+                        <button type="submit">Read more</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </body>
+
 </html>
